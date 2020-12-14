@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import { ConnectedRouter } from 'react-router-redux';
+import { history } from './redux/store';
 
-export default App;
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import * as actionCreators from './redux/actions/actionCreators';
+
+import Main from './components/Main/Main';
+
+
+const App = props => (
+  <ConnectedRouter history={history}>
+    <Main {...props} />
+  </ConnectedRouter> 
+);
+
+
+const mapStateToProps = state => ({
+    allGames: state.allGames,
+    popularGames: state.popularGames,
+    autoSuggestions: state.autoSuggestions,
+    searchResults: state.searchResults,
+    userInfo: state.userInfo,
+    errors: state.errors,
+    loadingBar: state.loadingBarReducer,
+    routing: state.routing
+  });
+  
+  const mapDispatchToProps = dispatch => (bindActionCreators(actionCreators, dispatch));
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+

@@ -1,0 +1,28 @@
+.contectB {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.contectH {
+  margin-bottom: 5em;
+  top: 0;
+  z-index: 1;
+}
+
+.contectM {
+  flex: 1 0 auto;
+}
+
+.mainFooter {
+  flex-shrink: 0;
+}
+
+.mainContainer {
+  margin-left: 1% !important;
+  margin-right: 1% !important;
+}
+
+.amountItens {
+  max-width: 170px;
+}

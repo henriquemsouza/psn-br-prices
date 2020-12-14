@@ -1,0 +1,6 @@
+.customBadge {
+  background-color: black;
+}
+.customBadge:hover {
+    background-color: gold;
+  }
