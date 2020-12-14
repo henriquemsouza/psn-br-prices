@@ -2,6 +2,7 @@
   "name": "psn-br-prices",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://psn-br-prices.herokuapp.com/",
   "dependencies": {
     "history": "^4.7.2",
     "react": "^16.0.0",
