@@ -8,7 +8,7 @@ import store from './redux/store';
 
 import App from './App';
 import './index.css';
-import registerServiceWorker from './registerServiceWorker';
+import reportWebVitals from './reportWebVitals';
 
 
 
@@ -19,6 +19,4 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-// reportWebVitals();
-
-registerServiceWorker();
+reportWebVitals();
