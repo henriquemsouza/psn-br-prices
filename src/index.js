@@ -11,7 +11,6 @@ import './index.css';
 import reportWebVitals from './reportWebVitals';
 
 
-
 ReactDOM.render(
     <Provider store={store}>
         <App />
