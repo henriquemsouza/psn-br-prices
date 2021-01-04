@@ -8,6 +8,7 @@ export function* getTopGames(action) {
         const games = yield call(gameInfo.getTopGames, action.payload);
         yield put({ type: types.FIND_POPULAR_GAMES_SUCCEEDED, payload: games });
     } catch (e) {
+        console.log(e)
         yield put({ type: types.FIND_POPULAR_GAMES_FAILED, message: e.message });
     }
 }

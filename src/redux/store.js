@@ -16,13 +16,11 @@ const loadingBar = loadingBarMiddleware();
 const middleware = [routerMiddleware(history), sagaMiddleware, loadingBar];
 const enhancers = [];
 
-// if (process.env.NODE_ENV === "development") {
   const devToolsExtension = window.devToolsExtension;
 
   if (typeof devToolsExtension === "function") {
     enhancers.push(devToolsExtension());
   }
-// } 
 
 const composedEnhancers = compose(applyMiddleware(...middleware), ...enhancers);
 
